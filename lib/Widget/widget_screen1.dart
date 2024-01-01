@@ -28,10 +28,13 @@ Widget Screen1Widget (BuildContext context, Screen1Model data) {
                   fontWeight: FontWeight.bold,
                 ),),
               Spacer(),
-              Icon(Icons.currency_rupee,size: 15,),
-              Text(data.mainAmount,
+
+              Text('₹ ${data.mainAmount}',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
+                  color: Colors.grey,
+                  fontSize: 12,
+                  decoration: TextDecoration.lineThrough
                 ),),
             SizedBox(width: 5,),
               Icon(Icons.currency_rupee,size: 15,),
@@ -51,8 +54,10 @@ Widget Screen1Widget (BuildContext context, Screen1Model data) {
                   ],
                 ),
                 Spacer(),
-                Icon(Icons.currency_rupee,size: 15,),
-                Text(data.discountAmount)
+                Text('₹ ${data.discountAmount}',style: TextStyle(
+                  decoration: TextDecoration.lineThrough,
+                  color: Colors.grey
+                ),)
               ],
             ),
             SizedBox(height: 4,),
